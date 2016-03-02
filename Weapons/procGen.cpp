@@ -27,14 +27,23 @@ bool ProceduralWeaponGen::Weapon::AddModifier(Modifier mod)
 bool ProceduralWeaponGen::Weapon::RemoveModifier(uint16_t index)
 {
     if(index >= vecModifier.size()) return false;
-    memset(&vecModifier[index], 0, sizeof(Modifier));
+    // Remove
+    vecModifier.erase(vecModifier.begin() + index);
+    
     EvaluateStats();
     return true;
 }
 bool ProceduralWeaponGen::Weapon::ReplaceModifier(uint16_t index, Modifier mod)
 {
     if(index >= vecModifier.size()) return false;
-    memcpy(&vecModifier[index], &mod, sizeof(Modifier));
+    //memcpy(&vecModifier[index], &mod, sizeof(Modifier));
+    
+    // Remove 
+    vecModifier.erase(vecModifier.begin() + index);
+    
+    // Add new
+    vecModifier.push_back(mod);
+    
     EvaluateStats();
     return true;
 }
