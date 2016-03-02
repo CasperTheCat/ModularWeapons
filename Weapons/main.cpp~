@@ -1,0 +1,19 @@
+// Check C++ Version is at least C++11
+#if __cplusplus < 201103L
+#error "Insufficent C++ Standard"
+#else
+
+
+#include "exampleClass.h"
+#include <iostream>
+#include <vector>
+#include <cstdint>
+
+int main(int argc, char **argv)
+{
+	// Do Nothing
+	return 0;
+}
+
+
+#endif // End >= C++11 Check

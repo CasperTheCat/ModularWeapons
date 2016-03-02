@@ -1,0 +1,7 @@
+#include "procGen.h"
+#include <vector>
+
+class procWeaponGen 
+{
+
+}
