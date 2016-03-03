@@ -1,5 +1,5 @@
 // Check C++ Version is at least C++11
-#if __cplusplus < 201103L
+#if __cplusplus < 201103L && !_WIN32
 #error "Insufficent C++ Standard"
 #else
 
