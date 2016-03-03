@@ -38,11 +38,13 @@ bool ProceduralWeaponGen::Weapon::ReplaceModifier(uint16_t index, Modifier mod)
     if(index >= vecModifier.size()) return false;
     //memcpy(&vecModifier[index], &mod, sizeof(Modifier));
     
-    // Remove 
-    vecModifier.erase(vecModifier.begin() + index);
+    //// Remove 
+    //vecModifier.erase(vecModifier.begin() + index);
+    //
+    //// Add new
+    //vecModifier.push_back(mod);
     
-    // Add new
-    vecModifier.push_back(mod);
+    vecModifier[index] = mod;
     
     EvaluateStats();
     return true;

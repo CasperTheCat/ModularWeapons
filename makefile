@@ -44,4 +44,4 @@ main.o:  Weapons/main.cpp Weapons/main.h
 # files and *~ backup files:
 #
 clean: 
-	$(RM) count *.o *~
+	$(RM) PWG *.o *~ Weapons/*~

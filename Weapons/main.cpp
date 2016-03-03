@@ -42,7 +42,7 @@ int main(int argc, char **argv)
     std::cout << "New Weapon Damage: " << tWeap->stats.damage << std::endl;
     
     std::cout << "Replacing second modifier with the first" << std::endl;
-    tWeap->ReplaceModifier(1,tMod);
+    tWeap->ReplaceModifier(0,tMod); // Remove removed a previous element
     std::cout << "New Weapon Damage: " << tWeap->stats.damage << std::endl;
     
     /// NOTE: IF A WEAPON IS RANGED, IT'S PROJECTILES CAN BE HANDLED VIA THE SAME MODIFIER INTERFACE.
